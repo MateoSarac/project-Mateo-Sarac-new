@@ -1,0 +1,39 @@
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <th>Naziv</th>
+      <th>Godina</th>
+      <th>Žanr</th>
+      <th>Trajanje</th>
+      <th>Rating</th>
+      <th>Opis</th>
+      <th>Poster</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td [style.width.%]="rowWidth">{{ movie.naziv }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.godina }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.zanr }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.trajanje }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.rating }}</td>
+        <td [style.width.%]="rowWidth">
+          <div>
+            <button type="button" (click)="toggleOpis(movie.id)">
+              {{ movie.showOpis ? "Hide" : "Show" }}
+            </button>
+            <p *ngIf="movie.showOpis">{{ movie.opis }}</p>
+          </div>
+        </td>
+        <td [style.width.%]="rowWidth">
+          <img
+            [src]="movie.poster"
+            [title]="movie.naziv"
+            [style.width.px]="imageWidth"
+            [style.height.px]="imageWidth"
+            [style.border-radius.%]="imageWidth"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

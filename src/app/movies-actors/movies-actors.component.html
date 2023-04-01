@@ -1,0 +1,30 @@
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <th>Naziv</th>
+      <th>Film</th>
+      <th>Godina</th>
+      <th>Grad</th>
+      <th>Visina</th>
+      <th>Slika</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let actor of actors">
+        <td [style.width.%]="rowWidth">{{ actor.naziv }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.film }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.godina }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.grad }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.visina }}</td>
+        <td [style.width.%]="rowWidth">
+          <img
+            [src]="actor.slika"
+            [title]="actor.naziv"
+            [style.width.px]="imageWidth"
+            [style.height.px]="imageWidth"
+            [style.border-radius.%]="imageWidth"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
