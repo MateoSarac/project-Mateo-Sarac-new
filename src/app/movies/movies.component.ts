@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IMovie } from './movies';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css'],
 })
-export class MoviesComponent {
-  movies: any[] = [
+export class MoviesComponent implements OnInit {
+  movies: IMovie[] = [
     {
       id: 1,
       naziv: 'The Godfather',
@@ -76,6 +77,10 @@ export class MoviesComponent {
   ];
   imageWidth: number = 130;
   rowWidth: number = 100 / 7;
+
+  ngOnInit(): void {
+    console.log('Prikaz nakon ucitavanja');
+  }
 
   toggleOpis(id: number) {
     for (var i = 0; i <= this.movies.length; i++) {

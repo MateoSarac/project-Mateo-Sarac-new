@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IActors } from './movies-actors';
 
 @Component({
   selector: 'app-movies-actors',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./movies-actors.component.css'],
 })
 export class MoviesActorsComponent {
-  actors: any[] = [
+  actors: IActors[] = [
     {
       naziv: 'Marlon Brando',
       film: 'The Godfather',
@@ -21,7 +22,7 @@ export class MoviesActorsComponent {
       godina: 1969,
       grad: 'Texas',
       visina: 1.82,
-      slika: '',
+      slika: 'assets/img/Matthew-McConaughey.jpg',
     },
     {
       naziv: 'Russell Crowe',
@@ -29,7 +30,7 @@ export class MoviesActorsComponent {
       godina: 2000,
       grad: 'Wellington',
       visina: 1.82,
-      slika: '',
+      slika: 'assets/img/RussellCrowe.jpg',
     },
     {
       naziv: 'Keanu Reeves',
@@ -37,7 +38,7 @@ export class MoviesActorsComponent {
       godina: 1999,
       grad: 'Toronto',
       visina: 1.86,
-      slika: '',
+      slika: 'assets/img/KeanuReeves.jpg',
     },
     {
       naziv: 'Brad Pitt',
@@ -45,7 +46,7 @@ export class MoviesActorsComponent {
       godina: 1995,
       grad: 'Oklahoma',
       visina: 1.8,
-      slika: '',
+      slika: 'assets/img/BradPitt.webp',
     },
     {
       naziv: 'Peter Geddis',
@@ -53,7 +54,7 @@ export class MoviesActorsComponent {
       godina: 1977,
       grad: 'London',
       visina: 1.85,
-      slika: '',
+      slika: 'assets/img/PeterGeddis.jpg',
     },
   ];
 
