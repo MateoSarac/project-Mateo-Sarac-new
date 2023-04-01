@@ -59,7 +59,7 @@ export class MoviesComponent implements OnInit {
       zanr: 'Crime',
       trajanje: '2h 7m',
       rating: 8.6,
-      opis: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',
+      opis: 'Two detectives, a rookie and a veteran, hunt a serial killler who uses the seven deadly sins as his motives.',
       poster: 'assets/img/seven.jpg',
       showOpis: false,
     },
