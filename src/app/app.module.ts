@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MoviesActorsComponent } from './movies-actors/movies-actors.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { ActorDetailsComponent } from './actor-details/actor-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     MoviesActorsComponent,
-    NavigationComponent
+    NavigationComponent,
+    MovieDetailsComponent,
+    ActorDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

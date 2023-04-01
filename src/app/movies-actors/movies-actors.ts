@@ -1,4 +1,5 @@
 export interface IActors {
+  id: number;
   naziv: string;
   film: string;
   godina: number;

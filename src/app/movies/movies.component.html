@@ -33,6 +33,15 @@
             [style.border-radius.%]="imageWidth"
           />
         </td>
+        <td>
+          <button
+            type="success"
+            class="btn btn-success"
+            [routerLink]="['/details', movie.id]"
+          >
+            Details
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

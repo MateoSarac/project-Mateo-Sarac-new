@@ -17,7 +17,7 @@ export class MoviesComponent implements OnInit {
       rating: 9.2,
       opis: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',
       poster: 'assets/img/TheGodfather.png',
-      showOpis: true,
+      showOpis: false,
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export class MoviesComponent implements OnInit {
       rating: 8.6,
       opis: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanitys survival.',
       poster: 'assets/img/interstellar.jpg',
-      showOpis: true,
+      showOpis: false,
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ export class MoviesComponent implements OnInit {
       rating: 8.5,
       opis: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.',
       poster: 'assets/img/gladiator.jpg',
-      showOpis: true,
+      showOpis: false,
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ export class MoviesComponent implements OnInit {
       rating: 8.7,
       opis: 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.',
       poster: 'assets/img/matrix.jpg',
-      showOpis: true,
+      showOpis: false,
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ export class MoviesComponent implements OnInit {
       rating: 8.6,
       opis: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',
       poster: 'assets/img/seven.jpg',
-      showOpis: true,
+      showOpis: false,
     },
     {
       id: 6,
@@ -72,7 +72,7 @@ export class MoviesComponent implements OnInit {
       rating: 8.6,
       opis: 'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empires world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.',
       poster: 'assets/img/star-wars.webp',
-      showOpis: true,
+      showOpis: false,
     },
   ];
   imageWidth: number = 130;
