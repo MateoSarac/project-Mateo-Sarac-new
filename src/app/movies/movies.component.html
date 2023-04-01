@@ -18,7 +18,7 @@
         <td [style.width.%]="rowWidth">{{ movie.rating }}</td>
         <td [style.width.%]="rowWidth">
           <div>
-            <button type="button" (click)="toggleOpis(movie.id)">
+            <button type="button" (click)="toggleOpis(movie.id)" class="btn btn-secondary">
               {{ movie.showOpis ? "Hide" : "Show" }}
             </button>
             <p *ngIf="movie.showOpis">{{ movie.opis }}</p>
@@ -37,7 +37,7 @@
           <button
             type="success"
             class="btn btn-success"
-            [routerLink]="['/details', movie.id]"
+            [routerLink]="['/moviedetails', movie.id]"
           >
             Details
           </button>

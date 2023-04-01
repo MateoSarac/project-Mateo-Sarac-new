@@ -76,7 +76,7 @@ export class MoviesComponent implements OnInit {
     },
   ];
   imageWidth: number = 130;
-  rowWidth: number = 100 / 7;
+  rowWidth: number = 100 / 8;
 
   ngOnInit(): void {
     console.log('Prikaz nakon ucitavanja');
