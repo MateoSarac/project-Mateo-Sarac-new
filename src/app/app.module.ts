@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { ActorDetailsComponent } from './actor-details/actor-details.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,8 @@ import { ActorDetailsComponent } from './actor-details/actor-details.component';
     MovieDetailsComponent,
     ActorDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

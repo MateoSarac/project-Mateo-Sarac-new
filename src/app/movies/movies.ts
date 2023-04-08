@@ -2,7 +2,7 @@ export interface IMovie {
   id: number;
   naziv: string;
   godina: number;
-  zanr: string;
+  type: string;
   trajanje: string;
   rating: number;
   opis: string;

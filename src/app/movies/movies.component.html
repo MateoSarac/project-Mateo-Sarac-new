@@ -3,7 +3,7 @@
     <thead>
       <th>Naziv</th>
       <th>Godina</th>
-      <th>Žanr</th>
+      <th>Tip</th>
       <th>Trajanje</th>
       <th>Rating</th>
       <th>Opis</th>
@@ -11,14 +11,18 @@
     </thead>
     <tbody>
       <tr *ngFor="let movie of movies">
-        <td [style.width.%]="rowWidth">{{ movie.naziv }}</td>
-        <td [style.width.%]="rowWidth">{{ movie.godina }}</td>
-        <td [style.width.%]="rowWidth">{{ movie.zanr }}</td>
-        <td [style.width.%]="rowWidth">{{ movie.trajanje }}</td>
-        <td [style.width.%]="rowWidth">{{ movie.rating }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.titleText?.text }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.releaseYear.year }}</td>
+        <td [style.width.%]="rowWidth">{{ movie.titleType?.id }}</td>
+        <td [style.width.%]="rowWidth">
+          {{ movie.titleType?.isSeries ? "Serija" : "Nije serija" }}
+        </td>
+        <td [style.width.%]="rowWidth">
+          {{ movie.titleType?.isEpisode? "Epizoda : "Nije epizoda" }}
+        </td>
         <td [style.width.%]="rowWidth">
           <div>
-            <button type="button" (click)="toggleOpis(movie.id)" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary">
               {{ movie.showOpis ? "Hide" : "Show" }}
             </button>
             <p *ngIf="movie.showOpis">{{ movie.opis }}</p>
