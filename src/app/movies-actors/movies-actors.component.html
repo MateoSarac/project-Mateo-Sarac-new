@@ -1,30 +1,21 @@
 <div>
+  <div>
+    <button type="button">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+  </div>
   <table class="table table-bordered">
     <thead>
-      <th>Naziv</th>
-      <th>Film</th>
-      <th>Godina</th>
-      <th>Grad</th>
-      <th>Visina</th>
-      <th>Slika</th>
+      <th>Ime i Prezime</th>
+      <th>Godiste</th>
+      <th>Profesija</th>
     </thead>
     <tbody>
       <tr *ngFor="let actor of actors">
-        <td [style.width.%]="rowWidth">{{ actor.naziv }}</td>
-        <td [style.width.%]="rowWidth">{{ actor.film }}</td>
-        <td [style.width.%]="rowWidth">{{ actor.godina }}</td>
-        <td [style.width.%]="rowWidth">{{ actor.grad }}</td>
-        <td [style.width.%]="rowWidth">{{ actor.visina }}</td>
-        <td [style.width.%]="rowWidth">
-          <img
-            [src]="actor.slika"
-            [title]="actor.naziv"
-            [style.width.px]="imageWidth"
-            [style.height.px]="imageWidth"
-            [style.border-radius.%]="imageWidth"
-          />
-        </td>
-        <td>
+        <td [style.width.%]="rowWidth">{{ actor.primaryName }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.birthYear }}</td>
+        <td [style.width.%]="rowWidth">{{ actor.primaryProfession }}</td>
+        <!-- <td>
           <button
             type="success"
             class="btn btn-success"
@@ -32,7 +23,7 @@
           >
             Details
           </button>
-        </td>
+        </td> -->
       </tr>
     </tbody>
   </table>

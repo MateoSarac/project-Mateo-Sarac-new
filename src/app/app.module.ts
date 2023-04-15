@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { ActorDetailsComponent } from './actor-details/actor-details.component';
 import { DataService } from './data.service';
+import { GenresComponent } from './genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DataService } from './data.service';
     NavigationComponent,
     MovieDetailsComponent,
     ActorDetailsComponent,
+    GenresComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DataService],

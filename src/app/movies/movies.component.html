@@ -1,12 +1,16 @@
 <div>
+  <div>
+    <button type="button">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+  </div>
   <table class="table table-bordered">
     <thead>
       <th>Naziv</th>
       <th>Godina</th>
       <th>Tip</th>
-      <th>Trajanje</th>
-      <th>Rating</th>
-      <th>Opis</th>
+      <th>Serija</th>
+      <th>Epizoda</th>
       <th>Poster</th>
     </thead>
     <tbody>
@@ -18,25 +22,27 @@
           {{ movie.titleType?.isSeries ? "Serija" : "Nije serija" }}
         </td>
         <td [style.width.%]="rowWidth">
-          {{ movie.titleType?.isEpisode? "Epizoda : "Nije epizoda" }}
-        </td>
-        <td [style.width.%]="rowWidth">
-          <div>
-            <button type="button" class="btn btn-secondary">
-              {{ movie.showOpis ? "Hide" : "Show" }}
-            </button>
-            <p *ngIf="movie.showOpis">{{ movie.opis }}</p>
-          </div>
+          {{ movie.titleType?.isEpisode ? "Epizoda" : "Nije epizoda" }}
         </td>
         <td [style.width.%]="rowWidth">
           <img
-            [src]="movie.poster"
-            [title]="movie.naziv"
+            *ngIf="movie.primaryImage?.url"
+            [src]="movie.primaryImage?.url"
+            [title]="movie.caption?.plainText"
+            [style.width.px]="imageWidth"
+            [style.height.px]="imageWidth"
+            [style.border-radius.%]="imageWidth"
+          />
+          <img
+            *ngIf="!movie.primaryImage?.url"
+            src="../../assets/img/placeholder.jpg"
+            [title]="movie.caption?.plainText"
             [style.width.px]="imageWidth"
             [style.height.px]="imageWidth"
             [style.border-radius.%]="imageWidth"
           />
         </td>
+
         <td>
           <button
             type="success"

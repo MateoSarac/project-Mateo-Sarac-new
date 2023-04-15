@@ -38,4 +38,19 @@ export class DataService {
       options
     );
   }
+  getActors() {
+    var header = new HttpHeaders()
+      .set(
+        'X-RapidAPI-Key',
+        '86b6da0543msh2e9c2dc36d537c9p14fcf1jsn9cfa92ba5e49'
+      )
+      .set('X-RapidAPI-Host', 'moviesdatabase.p.rapidapi.com');
+
+    var options = { headers: header };
+
+    return this.http.get(
+      'https://moviesdatabase.p.rapidapi.com/actors',
+      options
+    );
+  }
 }

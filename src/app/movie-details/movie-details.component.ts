@@ -25,7 +25,7 @@ export class MovieDetailsComponent implements OnInit {
   fetchGenres() {
     this.dataService.getGenres().subscribe((response) => {
       this.genres = response;
-      console.log(this.genres);
+      // console.log(this.genres);
     });
   }
 }

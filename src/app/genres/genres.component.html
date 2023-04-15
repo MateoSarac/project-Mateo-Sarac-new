@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <button type="button">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <th>Naziv žanra</th>
+      <!-- <th>Drugi naziv žanra</th> -->
+      <!-- <th>Treći naziv žanra</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let genre of genres">
+        <td>{{ genre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
